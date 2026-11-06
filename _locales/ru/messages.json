@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "WhatsApp на боковой панели: при ширине меньше заданной показывается одна панель — список чатов или открытый чат с кнопкой «Назад»."
+  },
+  "actionTitle": {
+    "message": "Открыть WhatsApp"
+  },
+  "backLabel": {
+    "message": "Назад к списку чатов"
+  },
+  "optEnabled": {
+    "message": "Включено"
+  },
+  "optThreshold": {
+    "message": "Максимальная ширина (px)"
+  },
+  "optShowNav": {
+    "message": "Панель значков рядом со списком чатов"
+  },
+  "stateList": {
+    "message": "активно, список чатов"
+  },
+  "stateChat": {
+    "message": "активно, переписка"
+  },
+  "stateWide": {
+    "message": "вся страница (выше порога)"
+  },
+  "stateDisabled": {
+    "message": "отключено"
+  },
+  "stateWaiting": {
+    "message": "ожидание списка чатов"
+  },
+  "stateNotRecognized": {
+    "message": "Макет WhatsApp не распознан"
+  },
+  "statusLine": {
+    "message": "$1. Ширина $2 px, в $3."
+  },
+  "noPage": {
+    "message": "Страница WhatsApp не обнаружена. Откройте или перезагрузите панель."
+  },
+  "hiddenOnly": {
+    "message": "Внимание: чат не закрылся. Он остаётся открытым за списком, и новые сообщения могут быть отмечены как прочитанные."
+  },
+  "copyDiagnostics": {
+    "message": "Скопировать диагностику"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp не отвечает: откройте панель и повторите попытку."
+  },
+  "diagCopied": {
+    "message": "Скопировано: только структура страницы, без текста."
+  },
+  "diagCopyFailed": {
+    "message": "Не удалось скопировать в буфер обмена."
+  }
+}

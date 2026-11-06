@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "Yan panelde WhatsApp: seçilen genişliğin altında tek seferde tek bölme gösterir, sohbet listesi veya açık sohbet, geri düğmesiyle birlikte."
+  },
+  "actionTitle": {
+    "message": "WhatsApp'ı aç"
+  },
+  "backLabel": {
+    "message": "Sohbet listesine dön"
+  },
+  "optEnabled": {
+    "message": "Etkin"
+  },
+  "optThreshold": {
+    "message": "En fazla genişlik (px)"
+  },
+  "optShowNav": {
+    "message": "Sohbet listesinin yanında simge çubuğu"
+  },
+  "stateList": {
+    "message": "etkin, sohbet listesi"
+  },
+  "stateChat": {
+    "message": "etkin, konuşma"
+  },
+  "stateWide": {
+    "message": "tam sayfa (eşiğin üstünde)"
+  },
+  "stateDisabled": {
+    "message": "devre dışı"
+  },
+  "stateWaiting": {
+    "message": "sohbet listesi bekleniyor"
+  },
+  "stateNotRecognized": {
+    "message": "WhatsApp düzeni tanınmadı"
+  },
+  "statusLine": {
+    "message": "$1. Genişlik $2 px, saat $3."
+  },
+  "noPage": {
+    "message": "WhatsApp sayfası algılanmadı. Paneli açın veya yeniden yükleyin."
+  },
+  "hiddenOnly": {
+    "message": "Uyarı: sohbet gerçekten kapanmadı. Listenin arkasında açık kalır ve yeni mesajlar okundu olarak işaretlenebilir."
+  },
+  "copyDiagnostics": {
+    "message": "Tanılamayı kopyala"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp yanıt vermiyor: paneli açıp yeniden deneyin."
+  },
+  "diagCopied": {
+    "message": "Kopyalandı: yalnızca sayfa yapısını içerir, metin içermez."
+  },
+  "diagCopyFailed": {
+    "message": "Panoya kopyalanamadı."
+  }
+}

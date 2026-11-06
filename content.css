@@ -144,6 +144,10 @@ html.wsp-on.wsp-chat .wsp-back {
   display: inline-flex;
 }
 
+.wsp-back:dir(rtl) svg {
+  transform: scaleX(-1);
+}
+
 .wsp-back:hover {
   background: rgba(128, 128, 128, 0.2);
 }

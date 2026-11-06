@@ -1,14 +1,15 @@
 {
   "manifest_version": 3,
   "name": "WhatsApp Side Panel Layout",
-  "version": "0.2.1",
-  "description": "WhatsApp nel pannello laterale: sotto una certa larghezza mostra un pannello alla volta, elenco conversazioni oppure chat, con tasto indietro.",
+  "version": "0.3.0",
+  "default_locale": "en",
+  "description": "__MSG_extDescription__",
   "minimum_chrome_version": "116",
   "permissions": ["sidePanel", "storage", "declarativeNetRequestWithHostAccess"],
   "host_permissions": ["https://web.whatsapp.com/*"],
   "background": { "service_worker": "background.js" },
   "action": {
-    "default_title": "Apri WhatsApp",
+    "default_title": "__MSG_actionTitle__",
     "default_icon": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png" }
   },
   "side_panel": { "default_path": "panel.html" },

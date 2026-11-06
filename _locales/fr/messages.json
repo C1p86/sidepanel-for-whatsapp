@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "WhatsApp dans le panneau latéral : en dessous d'une largeur choisie, il affiche un seul volet à la fois, la liste des discussions ou la discussion ouverte, avec un bouton retour."
+  },
+  "actionTitle": {
+    "message": "Ouvrir WhatsApp"
+  },
+  "backLabel": {
+    "message": "Retour à la liste des discussions"
+  },
+  "optEnabled": {
+    "message": "Activée"
+  },
+  "optThreshold": {
+    "message": "Largeur maximale (px)"
+  },
+  "optShowNav": {
+    "message": "Barre d'icônes à côté de la liste des discussions"
+  },
+  "stateList": {
+    "message": "active, liste des discussions"
+  },
+  "stateChat": {
+    "message": "active, conversation"
+  },
+  "stateWide": {
+    "message": "page entière (au-dessus du seuil)"
+  },
+  "stateDisabled": {
+    "message": "désactivée"
+  },
+  "stateWaiting": {
+    "message": "en attente de la liste des discussions"
+  },
+  "stateNotRecognized": {
+    "message": "Mise en page de WhatsApp non reconnue"
+  },
+  "statusLine": {
+    "message": "$1. Largeur $2 px, à $3."
+  },
+  "noPage": {
+    "message": "Aucune page WhatsApp détectée. Ouvrez ou rechargez le panneau."
+  },
+  "hiddenOnly": {
+    "message": "Attention : la discussion ne s’est pas vraiment fermée. Elle reste ouverte derrière la liste et les nouveaux messages peuvent être marqués comme lus."
+  },
+  "copyDiagnostics": {
+    "message": "Copier le diagnostic"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp ne répond pas : ouvrez le panneau et réessayez."
+  },
+  "diagCopied": {
+    "message": "Copié : contient uniquement la structure de la page, aucun texte."
+  },
+  "diagCopyFailed": {
+    "message": "Impossible de copier dans le presse-papiers."
+  }
+}

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it">
+<html>
   <head>
     <meta charset="utf-8" />
     <title>WhatsApp Side Panel Layout</title>
@@ -39,11 +39,11 @@
     </style>
   </head>
   <body>
-    <label>Attiva <input id="enabled" type="checkbox" /></label>
-    <label>Larghezza massima (px) <input id="threshold" type="number" min="300" max="2000" step="10" /></label>
-    <label>Barra icone a sinistra nell'elenco <input id="showNav" type="checkbox" /></label>
+    <label><span data-i18n="optEnabled"></span> <input id="enabled" type="checkbox" /></label>
+    <label><span data-i18n="optThreshold"></span> <input id="threshold" type="number" min="300" max="2000" step="10" /></label>
+    <label><span data-i18n="optShowNav"></span> <input id="showNav" type="checkbox" /></label>
     <div id="status" role="status"></div>
-    <button id="diagnostics" type="button">Copia diagnostica</button>
+    <button id="diagnostics" type="button" data-i18n="copyDiagnostics"></button>
     <p id="message" role="alert"></p>
     <script src="popup.js"></script>
   </body>

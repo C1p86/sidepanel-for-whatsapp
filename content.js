@@ -208,7 +208,7 @@
   const backButton = document.createElement('button');
   backButton.type = 'button';
   backButton.className = 'wsp-back';
-  backButton.title = "Torna all'elenco conversazioni";
+  backButton.title = chrome.i18n.getMessage('backLabel');
   backButton.setAttribute('aria-label', backButton.title);
   backButton.innerHTML =
     '<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>';

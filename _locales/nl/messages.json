@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "WhatsApp in het zijpaneel: onder een gekozen breedte toont het één paneel tegelijk, de chatlijst of de geopende chat, met een terugknop."
+  },
+  "actionTitle": {
+    "message": "WhatsApp openen"
+  },
+  "backLabel": {
+    "message": "Terug naar de chatlijst"
+  },
+  "optEnabled": {
+    "message": "Ingeschakeld"
+  },
+  "optThreshold": {
+    "message": "Maximale breedte (px)"
+  },
+  "optShowNav": {
+    "message": "Pictogrammenbalk naast de chatlijst"
+  },
+  "stateList": {
+    "message": "actief, chatlijst"
+  },
+  "stateChat": {
+    "message": "actief, gesprek"
+  },
+  "stateWide": {
+    "message": "volledige pagina (boven de drempel)"
+  },
+  "stateDisabled": {
+    "message": "uitgeschakeld"
+  },
+  "stateWaiting": {
+    "message": "wachten op de chatlijst"
+  },
+  "stateNotRecognized": {
+    "message": "WhatsApp-indeling niet herkend"
+  },
+  "statusLine": {
+    "message": "$1. Breedte $2 px, om $3."
+  },
+  "noPage": {
+    "message": "Geen WhatsApp-pagina gevonden. Open of herlaad het paneel."
+  },
+  "hiddenOnly": {
+    "message": "Let op: de chat is niet echt gesloten. Hij blijft open achter de lijst en nieuwe berichten kunnen als gelezen worden gemarkeerd."
+  },
+  "copyDiagnostics": {
+    "message": "Diagnose kopiëren"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp reageert niet: open het paneel en probeer het opnieuw."
+  },
+  "diagCopied": {
+    "message": "Gekopieerd: bevat alleen de paginastructuur, geen tekst."
+  },
+  "diagCopyFailed": {
+    "message": "Kopiëren naar het klembord is mislukt."
+  }
+}

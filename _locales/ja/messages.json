@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "サイドパネルで WhatsApp を使用:指定した幅より狭いときは、チャット一覧または開いているチャットのどちらか一方を、戻るボタン付きで表示します。"
+  },
+  "actionTitle": {
+    "message": "WhatsApp を開く"
+  },
+  "backLabel": {
+    "message": "チャット一覧に戻る"
+  },
+  "optEnabled": {
+    "message": "有効"
+  },
+  "optThreshold": {
+    "message": "最大幅(px)"
+  },
+  "optShowNav": {
+    "message": "チャット一覧の横にアイコンバーを表示"
+  },
+  "stateList": {
+    "message": "有効、チャット一覧"
+  },
+  "stateChat": {
+    "message": "有効、会話"
+  },
+  "stateWide": {
+    "message": "ページ全体(しきい値以上)"
+  },
+  "stateDisabled": {
+    "message": "無効"
+  },
+  "stateWaiting": {
+    "message": "チャット一覧を待機中"
+  },
+  "stateNotRecognized": {
+    "message": "WhatsApp のレイアウトを認識できません"
+  },
+  "statusLine": {
+    "message": "$1。幅 $2 px、時刻 $3。"
+  },
+  "noPage": {
+    "message": "WhatsApp のページが検出されません。パネルを開くか再読み込みしてください。"
+  },
+  "hiddenOnly": {
+    "message": "注意:チャットは実際には閉じていません。一覧の背後で開いたままなので、新しいメッセージが既読になる場合があります。"
+  },
+  "copyDiagnostics": {
+    "message": "診断情報をコピー"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp が応答しません。パネルを開いてもう一度お試しください。"
+  },
+  "diagCopied": {
+    "message": "コピーしました:ページ構造のみで、テキストは含まれません。"
+  },
+  "diagCopyFailed": {
+    "message": "クリップボードにコピーできませんでした。"
+  }
+}

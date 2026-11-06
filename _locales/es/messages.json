@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "WhatsApp en el panel lateral: por debajo de un ancho elegido muestra un panel cada vez, la lista de chats o el chat abierto, con un botón para volver."
+  },
+  "actionTitle": {
+    "message": "Abrir WhatsApp"
+  },
+  "backLabel": {
+    "message": "Volver a la lista de chats"
+  },
+  "optEnabled": {
+    "message": "Activada"
+  },
+  "optThreshold": {
+    "message": "Ancho máximo (px)"
+  },
+  "optShowNav": {
+    "message": "Barra de iconos junto a la lista de chats"
+  },
+  "stateList": {
+    "message": "activa, lista de chats"
+  },
+  "stateChat": {
+    "message": "activa, conversación"
+  },
+  "stateWide": {
+    "message": "página completa (por encima del umbral)"
+  },
+  "stateDisabled": {
+    "message": "desactivada"
+  },
+  "stateWaiting": {
+    "message": "esperando la lista de chats"
+  },
+  "stateNotRecognized": {
+    "message": "Diseño de WhatsApp no reconocido"
+  },
+  "statusLine": {
+    "message": "$1. Ancho $2 px, a las $3."
+  },
+  "noPage": {
+    "message": "No se ha detectado ninguna página de WhatsApp. Abre o recarga el panel."
+  },
+  "hiddenOnly": {
+    "message": "Atención: el chat no se ha cerrado del todo. Sigue abierto detrás de la lista y los mensajes nuevos pueden marcarse como leídos."
+  },
+  "copyDiagnostics": {
+    "message": "Copiar diagnóstico"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp no responde: abre el panel e inténtalo de nuevo."
+  },
+  "diagCopied": {
+    "message": "Copiado: solo contiene la estructura de la página, ningún texto."
+  },
+  "diagCopyFailed": {
+    "message": "No se ha podido copiar al portapapeles."
+  }
+}

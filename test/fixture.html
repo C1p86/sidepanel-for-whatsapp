@@ -42,12 +42,12 @@
           <div class="col" id="leftcol">
             <div id="side">
               <div id="pane-side">
-                <div class="row row-visible" id="row1">Chat Uno</div>
-                <div class="row row-visible" id="row2">Chat Due</div>
+                <div class="row row-visible" id="row1">Chat One</div>
+                <div class="row row-visible" id="row2">Chat Two</div>
               </div>
             </div>
           </div>
-          <div class="right" id="rightcol"><div class="placeholder">Seleziona una chat</div></div>
+          <div class="right" id="rightcol"><div class="placeholder">Select a chat</div></div>
           <div class="drawer" id="drawer"></div>
           <div class="layer" id="layer"><div class="slot" id="slot-left"></div><div class="slot" id="slot-right"></div></div>
         </div>
@@ -61,11 +61,11 @@
       const events = { headerClicks: 0 };
 
       function openChat(name) {
-        rightcol.innerHTML = `<div id="main"><header id="chat-header"><span dir="auto">${name}</span></header><div class="messages">Messaggi di ${name}</div><footer>Scrivi</footer></div>`;
+        rightcol.innerHTML = `<div id="main"><header id="chat-header"><span dir="auto">${name}</span></header><div class="messages">Messages from ${name}</div><footer>Type a message</footer></div>`;
         document.getElementById('chat-header').addEventListener('click', () => { events.headerClicks++; });
       }
       function closeChat() {
-        rightcol.innerHTML = '<div class="placeholder">Seleziona una chat</div>';
+        rightcol.innerHTML = '<div class="placeholder">Select a chat</div>';
       }
       document.getElementById('pane-side').addEventListener('click', (e) => {
         const row = e.target.closest('.row');
@@ -90,6 +90,7 @@
       // Stub of the only chrome.* APIs content.js touches.
       window.chrome = {
         runtime: { id: 'test' },
+        i18n: { getMessage: () => 'Back to chat list' },
         storage: {
           onChanged: { addListener() {} },
           local: {
@@ -134,7 +135,7 @@
         check('list: empty layer slots leave no border line', !visible($('slot-left')) && !visible($('slot-right')));
         if (stopAt('list')) return finish();
 
-        $('slot-left').innerHTML = '<div>Nuova chat</div>';
+        $('slot-left').innerHTML = '<div>New chat</div>';
         await wait(150);
         const slotRect = $('slot-left').getBoundingClientRect();
         check('left panel: covers the list at full width', visible($('slot-left')) && Math.round(slotRect.left) === 0 && Math.round(slotRect.width) === innerWidth, `left=${slotRect.left} width=${slotRect.width}`);
@@ -156,7 +157,7 @@
         check('chat: back button in header', visible(back) && back.parentElement === $('chat-header'));
         if (stopAt('chat')) return finish();
 
-        drawer.innerHTML = '<div>Info contatto</div>';
+        drawer.innerHTML = '<div>Contact info</div>';
         await wait(150);
         check('drawer: covers the chat at full width', visible(drawer) && width(drawer) === innerWidth, `drawer=${width(drawer)}`);
         if (stopAt('drawer')) return finish();
@@ -182,7 +183,7 @@
         check('reopen: back button present', visible(newBack) && newBack.parentElement === $('chat-header'));
 
         if (!params.get('noesc')) {
-          $('slot-left').innerHTML = '<div>Archiviate</div>';
+          $('slot-left').innerHTML = '<div>Archived</div>';
           await wait(150);
           newBack.click();
           await wait(1200);

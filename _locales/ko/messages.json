@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "사이드 패널의 WhatsApp: 지정한 너비보다 좁으면 채팅 목록 또는 열린 채팅 중 하나만 뒤로 버튼과 함께 표시합니다."
+  },
+  "actionTitle": {
+    "message": "WhatsApp 열기"
+  },
+  "backLabel": {
+    "message": "채팅 목록으로 돌아가기"
+  },
+  "optEnabled": {
+    "message": "사용"
+  },
+  "optThreshold": {
+    "message": "최대 너비(px)"
+  },
+  "optShowNav": {
+    "message": "채팅 목록 옆에 아이콘 막대 표시"
+  },
+  "stateList": {
+    "message": "사용 중, 채팅 목록"
+  },
+  "stateChat": {
+    "message": "사용 중, 대화"
+  },
+  "stateWide": {
+    "message": "전체 페이지(기준 너비 이상)"
+  },
+  "stateDisabled": {
+    "message": "사용 안 함"
+  },
+  "stateWaiting": {
+    "message": "채팅 목록을 기다리는 중"
+  },
+  "stateNotRecognized": {
+    "message": "WhatsApp 레이아웃을 인식할 수 없습니다"
+  },
+  "statusLine": {
+    "message": "$1. 너비 $2px, 시각 $3."
+  },
+  "noPage": {
+    "message": "WhatsApp 페이지가 감지되지 않았습니다. 패널을 열거나 새로고침하세요."
+  },
+  "hiddenOnly": {
+    "message": "주의: 채팅이 실제로 닫히지 않았습니다. 목록 뒤에 열려 있어 새 메시지가 읽음으로 표시될 수 있습니다."
+  },
+  "copyDiagnostics": {
+    "message": "진단 정보 복사"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp이 응답하지 않습니다. 패널을 열고 다시 시도하세요."
+  },
+  "diagCopied": {
+    "message": "복사됨: 페이지 구조만 포함되며 텍스트는 없습니다."
+  },
+  "diagCopyFailed": {
+    "message": "클립보드에 복사할 수 없습니다."
+  }
+}

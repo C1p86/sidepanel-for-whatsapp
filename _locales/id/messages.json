@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "WhatsApp di panel samping: di bawah lebar yang dipilih, hanya satu panel yang ditampilkan, daftar chat atau chat yang terbuka, dengan tombol kembali."
+  },
+  "actionTitle": {
+    "message": "Buka WhatsApp"
+  },
+  "backLabel": {
+    "message": "Kembali ke daftar chat"
+  },
+  "optEnabled": {
+    "message": "Aktif"
+  },
+  "optThreshold": {
+    "message": "Lebar maksimum (px)"
+  },
+  "optShowNav": {
+    "message": "Bilah ikon di samping daftar chat"
+  },
+  "stateList": {
+    "message": "aktif, daftar chat"
+  },
+  "stateChat": {
+    "message": "aktif, percakapan"
+  },
+  "stateWide": {
+    "message": "halaman penuh (di atas batas)"
+  },
+  "stateDisabled": {
+    "message": "nonaktif"
+  },
+  "stateWaiting": {
+    "message": "menunggu daftar chat"
+  },
+  "stateNotRecognized": {
+    "message": "Tata letak WhatsApp tidak dikenali"
+  },
+  "statusLine": {
+    "message": "$1. Lebar $2 px, pukul $3."
+  },
+  "noPage": {
+    "message": "Halaman WhatsApp tidak ditemukan. Buka atau muat ulang panel."
+  },
+  "hiddenOnly": {
+    "message": "Perhatian: chat tidak benar-benar tertutup. Chat tetap terbuka di belakang daftar dan pesan baru dapat ditandai sudah dibaca."
+  },
+  "copyDiagnostics": {
+    "message": "Salin diagnostik"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp tidak merespons: buka panel dan coba lagi."
+  },
+  "diagCopied": {
+    "message": "Disalin: hanya berisi struktur halaman, tanpa teks."
+  },
+  "diagCopyFailed": {
+    "message": "Tidak dapat menyalin ke papan klip."
+  }
+}

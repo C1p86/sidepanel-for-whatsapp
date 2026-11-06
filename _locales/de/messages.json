@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "WhatsApp in der Seitenleiste: Unterhalb einer gewählten Breite wird jeweils nur ein Bereich angezeigt, die Chatliste oder der geöffnete Chat, mit einer Zurück-Taste."
+  },
+  "actionTitle": {
+    "message": "WhatsApp öffnen"
+  },
+  "backLabel": {
+    "message": "Zurück zur Chatliste"
+  },
+  "optEnabled": {
+    "message": "Aktiviert"
+  },
+  "optThreshold": {
+    "message": "Maximale Breite (px)"
+  },
+  "optShowNav": {
+    "message": "Symbolleiste neben der Chatliste"
+  },
+  "stateList": {
+    "message": "aktiv, Chatliste"
+  },
+  "stateChat": {
+    "message": "aktiv, Unterhaltung"
+  },
+  "stateWide": {
+    "message": "ganze Seite (über dem Schwellenwert)"
+  },
+  "stateDisabled": {
+    "message": "deaktiviert"
+  },
+  "stateWaiting": {
+    "message": "Warten auf die Chatliste"
+  },
+  "stateNotRecognized": {
+    "message": "WhatsApp-Layout nicht erkannt"
+  },
+  "statusLine": {
+    "message": "$1. Breite $2 px, um $3."
+  },
+  "noPage": {
+    "message": "Keine WhatsApp-Seite erkannt. Öffne die Seitenleiste oder lade sie neu."
+  },
+  "hiddenOnly": {
+    "message": "Achtung: Der Chat wurde nicht wirklich geschlossen. Er bleibt hinter der Liste geöffnet und neue Nachrichten können als gelesen markiert werden."
+  },
+  "copyDiagnostics": {
+    "message": "Diagnose kopieren"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp antwortet nicht: Öffne die Seitenleiste und versuche es erneut."
+  },
+  "diagCopied": {
+    "message": "Kopiert: enthält nur die Seitenstruktur, keinen Text."
+  },
+  "diagCopyFailed": {
+    "message": "Kopieren in die Zwischenablage fehlgeschlagen."
+  }
+}

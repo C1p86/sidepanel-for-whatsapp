@@ -2,14 +2,22 @@ const DEFAULTS = { enabled: true, threshold: 700, showNav: false };
 const MIN_THRESHOLD = 300;
 const MAX_THRESHOLD = 2000;
 
-const STATE_LABELS = {
-  list: 'attiva, elenco conversazioni',
-  chat: 'attiva, conversazione',
-  wide: 'pagina intera (sopra la soglia)',
-  disabled: 'disattivata',
-  'waiting-for-chats': "in attesa dell'elenco chat",
-  'layout-not-recognized': 'layout di WhatsApp non riconosciuto',
+const t = (key, substitutions) => chrome.i18n.getMessage(key, substitutions);
+
+const STATE_KEYS = {
+  list: 'stateList',
+  chat: 'stateChat',
+  wide: 'stateWide',
+  disabled: 'stateDisabled',
+  'waiting-for-chats': 'stateWaiting',
+  'layout-not-recognized': 'stateNotRecognized',
 };
+
+document.documentElement.lang = chrome.i18n.getUILanguage();
+document.documentElement.dir = t('@@bidi_dir');
+document.querySelectorAll('[data-i18n]').forEach((el) => {
+  el.textContent = t(el.dataset.i18n);
+});
 
 const enabled = document.getElementById('enabled');
 const threshold = document.getElementById('threshold');
@@ -19,15 +27,14 @@ const message = document.getElementById('message');
 
 function renderStatus(status) {
   if (!status) {
-    statusBox.textContent = 'Nessuna pagina di WhatsApp rilevata. Apri o ricarica il pannello.';
+    statusBox.textContent = t('noPage');
     statusBox.classList.add('problem');
     return;
   }
-  const time = new Date(status.at).toLocaleTimeString();
-  let text = `${STATE_LABELS[status.state] ?? status.state}. Larghezza ${status.width}px, alle ${time}.`;
-  if (status.closeMethod === 'hidden-only') {
-    text += ' Attenzione: la chat non si è chiusa davvero, resta aperta dietro l\'elenco e i nuovi messaggi possono risultare letti.';
-  }
+  const time = new Date(status.at).toLocaleTimeString(chrome.i18n.getUILanguage());
+  const label = STATE_KEYS[status.state] ? t(STATE_KEYS[status.state]) : status.state;
+  let text = t('statusLine', [label, String(status.width), time]);
+  if (status.closeMethod === 'hidden-only') text += ` ${t('hiddenOnly')}`;
   statusBox.textContent = text;
   statusBox.classList.toggle('problem', status.state === 'layout-not-recognized' || status.closeMethod === 'hidden-only');
 }
@@ -55,7 +62,7 @@ document.getElementById('diagnostics').addEventListener('click', () => {
   message.textContent = '';
   const timeout = setTimeout(() => {
     chrome.storage.onChanged.removeListener(onDiagnostics);
-    message.textContent = 'WhatsApp non risponde: apri il pannello e riprova.';
+    message.textContent = t('diagNoAnswer');
   }, 1500);
 
   async function onDiagnostics(changes, area) {
@@ -64,9 +71,9 @@ document.getElementById('diagnostics').addEventListener('click', () => {
     chrome.storage.onChanged.removeListener(onDiagnostics);
     try {
       await navigator.clipboard.writeText(JSON.stringify(changes.diagnostics.newValue, null, 2));
-      message.textContent = 'Copiata: contiene solo la struttura della pagina, nessun testo.';
+      message.textContent = t('diagCopied');
     } catch {
-      message.textContent = 'Non sono riuscito a copiare negli appunti.';
+      message.textContent = t('diagCopyFailed');
     }
   }
 

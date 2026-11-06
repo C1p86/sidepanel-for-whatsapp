@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "WhatsApp no painel lateral: abaixo de uma largura escolhida, mostra um painel por vez, a lista de conversas ou a conversa aberta, com um botão de voltar."
+  },
+  "actionTitle": {
+    "message": "Abrir o WhatsApp"
+  },
+  "backLabel": {
+    "message": "Voltar à lista de conversas"
+  },
+  "optEnabled": {
+    "message": "Ativada"
+  },
+  "optThreshold": {
+    "message": "Largura máxima (px)"
+  },
+  "optShowNav": {
+    "message": "Barra de ícones ao lado da lista de conversas"
+  },
+  "stateList": {
+    "message": "ativa, lista de conversas"
+  },
+  "stateChat": {
+    "message": "ativa, conversa"
+  },
+  "stateWide": {
+    "message": "página inteira (acima do limite)"
+  },
+  "stateDisabled": {
+    "message": "desativada"
+  },
+  "stateWaiting": {
+    "message": "aguardando a lista de conversas"
+  },
+  "stateNotRecognized": {
+    "message": "Layout do WhatsApp não reconhecido"
+  },
+  "statusLine": {
+    "message": "$1. Largura $2 px, às $3."
+  },
+  "noPage": {
+    "message": "Nenhuma página do WhatsApp detectada. Abra ou recarregue o painel."
+  },
+  "hiddenOnly": {
+    "message": "Atenção: a conversa não foi realmente fechada. Ela continua aberta atrás da lista e novas mensagens podem ser marcadas como lidas."
+  },
+  "copyDiagnostics": {
+    "message": "Copiar diagnóstico"
+  },
+  "diagNoAnswer": {
+    "message": "O WhatsApp não está respondendo: abra o painel e tente novamente."
+  },
+  "diagCopied": {
+    "message": "Copiado: contém apenas a estrutura da página, nenhum texto."
+  },
+  "diagCopyFailed": {
+    "message": "Não foi possível copiar para a área de transferência."
+  }
+}

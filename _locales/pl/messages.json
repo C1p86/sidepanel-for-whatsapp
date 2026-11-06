@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "WhatsApp w panelu bocznym: poniżej wybranej szerokości pokazuje jeden panel naraz, listę czatów lub otwarty czat, z przyciskiem powrotu."
+  },
+  "actionTitle": {
+    "message": "Otwórz WhatsApp"
+  },
+  "backLabel": {
+    "message": "Powrót do listy czatów"
+  },
+  "optEnabled": {
+    "message": "Włączone"
+  },
+  "optThreshold": {
+    "message": "Maksymalna szerokość (px)"
+  },
+  "optShowNav": {
+    "message": "Pasek ikon obok listy czatów"
+  },
+  "stateList": {
+    "message": "aktywne, lista czatów"
+  },
+  "stateChat": {
+    "message": "aktywne, rozmowa"
+  },
+  "stateWide": {
+    "message": "cała strona (powyżej progu)"
+  },
+  "stateDisabled": {
+    "message": "wyłączone"
+  },
+  "stateWaiting": {
+    "message": "oczekiwanie na listę czatów"
+  },
+  "stateNotRecognized": {
+    "message": "Nie rozpoznano układu WhatsApp"
+  },
+  "statusLine": {
+    "message": "$1. Szerokość $2 px, godz. $3."
+  },
+  "noPage": {
+    "message": "Nie wykryto strony WhatsApp. Otwórz lub odśwież panel."
+  },
+  "hiddenOnly": {
+    "message": "Uwaga: czat nie został naprawdę zamknięty. Pozostaje otwarty za listą, a nowe wiadomości mogą zostać oznaczone jako przeczytane."
+  },
+  "copyDiagnostics": {
+    "message": "Kopiuj diagnostykę"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp nie odpowiada: otwórz panel i spróbuj ponownie."
+  },
+  "diagCopied": {
+    "message": "Skopiowano: zawiera tylko strukturę strony, bez tekstu."
+  },
+  "diagCopyFailed": {
+    "message": "Nie udało się skopiować do schowka."
+  }
+}

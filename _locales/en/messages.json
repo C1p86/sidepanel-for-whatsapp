@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "WhatsApp in the side panel: below a chosen width it shows one pane at a time, the chat list or the open chat, with a back button."
+  },
+  "actionTitle": {
+    "message": "Open WhatsApp"
+  },
+  "backLabel": {
+    "message": "Back to chat list"
+  },
+  "optEnabled": {
+    "message": "Enabled"
+  },
+  "optThreshold": {
+    "message": "Maximum width (px)"
+  },
+  "optShowNav": {
+    "message": "Icon bar next to the chat list"
+  },
+  "stateList": {
+    "message": "active, chat list"
+  },
+  "stateChat": {
+    "message": "active, conversation"
+  },
+  "stateWide": {
+    "message": "full page (above the threshold)"
+  },
+  "stateDisabled": {
+    "message": "disabled"
+  },
+  "stateWaiting": {
+    "message": "waiting for the chat list"
+  },
+  "stateNotRecognized": {
+    "message": "WhatsApp layout not recognized"
+  },
+  "statusLine": {
+    "message": "$1. Width $2 px, at $3."
+  },
+  "noPage": {
+    "message": "No WhatsApp page detected. Open or reload the panel."
+  },
+  "hiddenOnly": {
+    "message": "Warning: the chat did not really close. It stays open behind the list and new messages may be marked as read."
+  },
+  "copyDiagnostics": {
+    "message": "Copy diagnostics"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp is not answering: open the panel and try again."
+  },
+  "diagCopied": {
+    "message": "Copied: it contains only the page structure, no text."
+  },
+  "diagCopyFailed": {
+    "message": "Could not copy to the clipboard."
+  }
+}

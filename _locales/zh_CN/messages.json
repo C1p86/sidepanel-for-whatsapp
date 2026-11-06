@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "在侧边栏中使用 WhatsApp:窄于设定宽度时一次只显示一个窗格,即聊天列表或当前聊天,并提供返回按钮。"
+  },
+  "actionTitle": {
+    "message": "打开 WhatsApp"
+  },
+  "backLabel": {
+    "message": "返回聊天列表"
+  },
+  "optEnabled": {
+    "message": "启用"
+  },
+  "optThreshold": {
+    "message": "最大宽度(像素)"
+  },
+  "optShowNav": {
+    "message": "在聊天列表旁显示图标栏"
+  },
+  "stateList": {
+    "message": "已启用,聊天列表"
+  },
+  "stateChat": {
+    "message": "已启用,对话"
+  },
+  "stateWide": {
+    "message": "完整页面(高于阈值)"
+  },
+  "stateDisabled": {
+    "message": "已停用"
+  },
+  "stateWaiting": {
+    "message": "正在等待聊天列表"
+  },
+  "stateNotRecognized": {
+    "message": "无法识别 WhatsApp 布局"
+  },
+  "statusLine": {
+    "message": "$1。宽度 $2 像素,时间 $3。"
+  },
+  "noPage": {
+    "message": "未检测到 WhatsApp 页面。请打开或重新加载面板。"
+  },
+  "hiddenOnly": {
+    "message": "注意:聊天并未真正关闭。它仍在列表后面保持打开状态,新消息可能会被标记为已读。"
+  },
+  "copyDiagnostics": {
+    "message": "复制诊断信息"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp 没有响应:请打开面板后重试。"
+  },
+  "diagCopied": {
+    "message": "已复制:仅包含页面结构,不含任何文字。"
+  },
+  "diagCopyFailed": {
+    "message": "无法复制到剪贴板。"
+  }
+}

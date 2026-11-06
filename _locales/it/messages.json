@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "WhatsApp nel pannello laterale: sotto una certa larghezza mostra un pannello alla volta, elenco conversazioni oppure chat, con tasto indietro."
+  },
+  "actionTitle": {
+    "message": "Apri WhatsApp"
+  },
+  "backLabel": {
+    "message": "Torna all'elenco conversazioni"
+  },
+  "optEnabled": {
+    "message": "Attiva"
+  },
+  "optThreshold": {
+    "message": "Larghezza massima (px)"
+  },
+  "optShowNav": {
+    "message": "Barra icone a sinistra dell'elenco"
+  },
+  "stateList": {
+    "message": "attiva, elenco conversazioni"
+  },
+  "stateChat": {
+    "message": "attiva, conversazione"
+  },
+  "stateWide": {
+    "message": "pagina intera (sopra la soglia)"
+  },
+  "stateDisabled": {
+    "message": "disattivata"
+  },
+  "stateWaiting": {
+    "message": "in attesa dell'elenco chat"
+  },
+  "stateNotRecognized": {
+    "message": "layout di WhatsApp non riconosciuto"
+  },
+  "statusLine": {
+    "message": "$1. Larghezza $2 px, alle $3."
+  },
+  "noPage": {
+    "message": "Nessuna pagina di WhatsApp rilevata. Apri o ricarica il pannello."
+  },
+  "hiddenOnly": {
+    "message": "Attenzione: la chat non si è chiusa davvero. Resta aperta dietro l'elenco e i nuovi messaggi possono risultare letti."
+  },
+  "copyDiagnostics": {
+    "message": "Copia diagnostica"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp non risponde: apri il pannello e riprova."
+  },
+  "diagCopied": {
+    "message": "Copiata: contiene solo la struttura della pagina, nessun testo."
+  },
+  "diagCopyFailed": {
+    "message": "Non è stato possibile copiare negli appunti."
+  }
+}

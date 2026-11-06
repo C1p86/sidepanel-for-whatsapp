@@ -1,0 +1,59 @@
+{
+  "extDescription": {
+    "message": "साइड पैनल में WhatsApp: चुनी गई चौड़ाई से कम होने पर एक बार में एक ही पैनल दिखाता है, चैट सूची या खुली चैट, वापस जाने के बटन के साथ।"
+  },
+  "actionTitle": {
+    "message": "WhatsApp खोलें"
+  },
+  "backLabel": {
+    "message": "चैट सूची पर वापस जाएं"
+  },
+  "optEnabled": {
+    "message": "चालू"
+  },
+  "optThreshold": {
+    "message": "अधिकतम चौड़ाई (px)"
+  },
+  "optShowNav": {
+    "message": "चैट सूची के बगल में आइकन बार"
+  },
+  "stateList": {
+    "message": "सक्रिय, चैट सूची"
+  },
+  "stateChat": {
+    "message": "सक्रिय, बातचीत"
+  },
+  "stateWide": {
+    "message": "पूरा पेज (सीमा से ऊपर)"
+  },
+  "stateDisabled": {
+    "message": "बंद"
+  },
+  "stateWaiting": {
+    "message": "चैट सूची की प्रतीक्षा है"
+  },
+  "stateNotRecognized": {
+    "message": "WhatsApp का लेआउट पहचाना नहीं गया"
+  },
+  "statusLine": {
+    "message": "$1। चौड़ाई $2 px, समय $3।"
+  },
+  "noPage": {
+    "message": "कोई WhatsApp पेज नहीं मिला। पैनल खोलें या फिर से लोड करें।"
+  },
+  "hiddenOnly": {
+    "message": "चेतावनी: चैट वास्तव में बंद नहीं हुई। वह सूची के पीछे खुली रहती है और नए संदेश पढ़े हुए दिख सकते हैं।"
+  },
+  "copyDiagnostics": {
+    "message": "डायग्नोस्टिक्स कॉपी करें"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp जवाब नहीं दे रहा: पैनल खोलकर फिर से कोशिश करें।"
+  },
+  "diagCopied": {
+    "message": "कॉपी हो गया: इसमें केवल पेज की संरचना है, कोई टेक्स्ट नहीं।"
+  },
+  "diagCopyFailed": {
+    "message": "क्लिपबोर्ड पर कॉपी नहीं हो सका।"
+  }
+}
