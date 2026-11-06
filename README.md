@@ -37,7 +37,3 @@ Open the extension's **Options** (right-click its icon, or from `vivaldi://exten
 - In the extension's panel, WhatsApp runs in an iframe. To allow that, `background.js` removes `X-Frame-Options` and `Content-Security-Policy` and changes the `Sec-Fetch-*` headers, for that iframe only. If WhatsApp changes its server checks, the page may stop loading; the web panel remains as a fallback.
 - Vivaldi's panels present themselves as a mobile browser, and WhatsApp answers with its "use a computer" page, so the extension sends WhatsApp a desktop user agent (`background.js`, `desktop-ua.js`).
 - WhatsApp allows one active window: the panel, tabs and web panels compete for the session through the "Use here" prompt.
-
-## Tests
-
-`test/fixture.html` is a mock WhatsApp page with the same elements the extension depends on. Opened in a browser, it writes its check results at the bottom of the page, also with `?noesc=1`. Open it with a narrow window (under 700 px) and then a wide one. It does not replace a test on the real page.
