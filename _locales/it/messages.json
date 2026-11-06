@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "Layout di WhatsApp per il pannello laterale"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "WhatsApp nel pannello laterale: sotto una certa larghezza mostra un pannello alla volta, elenco conversazioni oppure chat, con tasto indietro."
   },

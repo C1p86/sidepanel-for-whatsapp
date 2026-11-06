@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "Tata Letak WhatsApp untuk Panel Samping"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "WhatsApp di panel samping: di bawah lebar yang dipilih, hanya satu panel yang ditampilkan, daftar chat atau chat yang terbuka, dengan tombol kembali."
   },

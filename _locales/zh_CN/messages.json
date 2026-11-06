@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "WhatsApp 侧边栏布局"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "在侧边栏中使用 WhatsApp:窄于设定宽度时一次只显示一个窗格,即聊天列表或当前聊天,并提供返回按钮。"
   },

@@ -13,7 +13,11 @@ const STATE_KEYS = {
   'layout-not-recognized': 'stateNotRecognized',
 };
 
-document.documentElement.lang = chrome.i18n.getUILanguage();
+const uiLanguage = chrome.i18n.getUILanguage();
+const numberFormat = new Intl.NumberFormat(uiLanguage);
+const timeFormat = new Intl.DateTimeFormat(uiLanguage, { timeStyle: 'medium' });
+
+document.documentElement.lang = uiLanguage;
 document.documentElement.dir = t('@@bidi_dir');
 document.querySelectorAll('[data-i18n]').forEach((el) => {
   el.textContent = t(el.dataset.i18n);
@@ -31,9 +35,9 @@ function renderStatus(status) {
     statusBox.classList.add('problem');
     return;
   }
-  const time = new Date(status.at).toLocaleTimeString(chrome.i18n.getUILanguage());
+  const time = timeFormat.format(status.at);
   const label = STATE_KEYS[status.state] ? t(STATE_KEYS[status.state]) : status.state;
-  let text = t('statusLine', [label, String(status.width), time]);
+  let text = t('statusLine', [label, numberFormat.format(status.width), time]);
   if (status.closeMethod === 'hidden-only') text += ` ${t('hiddenOnly')}`;
   statusBox.textContent = text;
   statusBox.classList.toggle('problem', status.state === 'layout-not-recognized' || status.closeMethod === 'hidden-only');

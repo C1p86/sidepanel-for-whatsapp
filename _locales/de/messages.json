@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "WhatsApp-Seitenleisten-Layout"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "WhatsApp in der Seitenleiste: Unterhalb einer gewählten Breite wird jeweils nur ein Bereich angezeigt, die Chatliste oder der geöffnete Chat, mit einer Zurück-Taste."
   },

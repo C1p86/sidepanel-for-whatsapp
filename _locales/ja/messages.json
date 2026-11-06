@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "WhatsApp サイドパネルレイアウト"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "サイドパネルで WhatsApp を使用:指定した幅より狭いときは、チャット一覧または開いているチャットのどちらか一方を、戻るボタン付きで表示します。"
   },

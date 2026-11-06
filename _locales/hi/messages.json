@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "साइड पैनल के लिए WhatsApp लेआउट"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "साइड पैनल में WhatsApp: चुनी गई चौड़ाई से कम होने पर एक बार में एक ही पैनल दिखाता है, चैट सूची या खुली चैट, वापस जाने के बटन के साथ।"
   },

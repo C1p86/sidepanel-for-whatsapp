@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "WhatsApp-indeling voor het zijpaneel"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "WhatsApp in het zijpaneel: onder een gekozen breedte toont het één paneel tegelijk, de chatlijst of de geopende chat, met een terugknop."
   },

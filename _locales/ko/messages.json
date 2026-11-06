@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "WhatsApp 사이드 패널 레이아웃"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "사이드 패널의 WhatsApp: 지정한 너비보다 좁으면 채팅 목록 또는 열린 채팅 중 하나만 뒤로 버튼과 함께 표시합니다."
   },

@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "Diseño de WhatsApp para el panel lateral"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "WhatsApp en el panel lateral: por debajo de un ancho elegido muestra un panel cada vez, la lista de chats o el chat abierto, con un botón para volver."
   },

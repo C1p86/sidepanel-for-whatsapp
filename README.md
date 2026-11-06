@@ -2,11 +2,11 @@
 
 An extension for Vivaldi (and other Chromium browsers) that makes WhatsApp Web usable in a narrow side panel. Below a width you choose, it shows one pane at a time, like Telegram: the chat list or the open chat, with a back button. Above that width you get the normal full page.
 
-The interface follows your browser's language automatically. Supported: English, Spanish, French, German, Italian, Portuguese (Brazil and Portugal), Russian, Chinese (Simplified), Japanese, Korean, Arabic, Hindi, Turkish, Dutch, Polish and Indonesian. Any other language falls back to English.
+The interface follows your browser's language automatically. Supported: English, Spanish, French, German, Italian, Portuguese (Brazil and Portugal), Russian, Chinese (Simplified and Traditional), Japanese, Korean, Arabic, Hindi, Turkish, Dutch, Polish and Indonesian. Any other language falls back to English.
 
-| Chat list | Open chat | Wider than the threshold |
-|---|---|---|
-| <img src="docs/screenshots/chat-list.jpg" alt="Narrow panel showing only the chat list" width="240"> | <img src="docs/screenshots/chat.jpg" alt="Narrow panel showing only the open chat with a back button" width="240"> | <img src="docs/screenshots/full-page.jpg" alt="Wide window showing the normal WhatsApp Web page" width="360"> |
+| Chat list | Wider than the threshold |
+|---|---|
+| <img src="docs/screenshots/chat-list.jpg" alt="Narrow panel showing only the chat list" width="240"> | <img src="docs/screenshots/full-page.jpg" alt="Wide window showing the normal WhatsApp Web page" width="360"> |
 
 Screenshots of the real page with placeholder names, pictures and messages.
 

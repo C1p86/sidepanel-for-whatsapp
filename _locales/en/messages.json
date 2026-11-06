@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "WhatsApp Side Panel Layout"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "WhatsApp in the side panel: below a chosen width it shows one pane at a time, the chat list or the open chat, with a back button."
   },

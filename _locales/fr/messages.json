@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "Disposition de WhatsApp pour le panneau latéral"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "WhatsApp dans le panneau latéral : en dessous d'une largeur choisie, il affiche un seul volet à la fois, la liste des discussions ou la discussion ouverte, avec un bouton retour."
   },

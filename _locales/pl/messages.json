@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "Układ WhatsApp dla panelu bocznego"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "WhatsApp w panelu bocznym: poniżej wybranej szerokości pokazuje jeden panel naraz, listę czatów lub otwarty czat, z przyciskiem powrotu."
   },

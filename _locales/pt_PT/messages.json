@@ -1,4 +1,10 @@
 {
+  "extName": {
+    "message": "Esquema do WhatsApp para o painel lateral"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
   "extDescription": {
     "message": "WhatsApp no painel lateral: abaixo de uma largura escolhida, mostra um painel por vez, a lista de conversas ou a conversa aberta, com um botão de voltar."
   },

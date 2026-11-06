@@ -1,0 +1,65 @@
+{
+  "extName": {
+    "message": "WhatsApp 側邊欄版面配置"
+  },
+  "panelTitle": {
+    "message": "WhatsApp"
+  },
+  "extDescription": {
+    "message": "在側邊欄中使用 WhatsApp:窄於設定寬度時一次只顯示一個窗格,即聊天清單或目前的聊天,並提供返回按鈕。"
+  },
+  "actionTitle": {
+    "message": "開啟 WhatsApp"
+  },
+  "backLabel": {
+    "message": "返回聊天清單"
+  },
+  "optEnabled": {
+    "message": "啟用"
+  },
+  "optThreshold": {
+    "message": "最大寬度(像素)"
+  },
+  "optShowNav": {
+    "message": "在聊天清單旁顯示圖示列"
+  },
+  "stateList": {
+    "message": "已啟用,聊天清單"
+  },
+  "stateChat": {
+    "message": "已啟用,對話"
+  },
+  "stateWide": {
+    "message": "完整頁面(高於門檻值)"
+  },
+  "stateDisabled": {
+    "message": "已停用"
+  },
+  "stateWaiting": {
+    "message": "正在等待聊天清單"
+  },
+  "stateNotRecognized": {
+    "message": "無法辨識 WhatsApp 版面配置"
+  },
+  "statusLine": {
+    "message": "$1。寬度 $2 像素,時間 $3。"
+  },
+  "noPage": {
+    "message": "未偵測到 WhatsApp 頁面。請開啟或重新載入面板。"
+  },
+  "hiddenOnly": {
+    "message": "注意:聊天並未真正關閉。它仍在清單後方保持開啟,新訊息可能會被標示為已讀。"
+  },
+  "copyDiagnostics": {
+    "message": "複製診斷資訊"
+  },
+  "diagNoAnswer": {
+    "message": "WhatsApp 沒有回應:請開啟面板後重試。"
+  },
+  "diagCopied": {
+    "message": "已複製:僅包含頁面結構,不含任何文字。"
+  },
+  "diagCopyFailed": {
+    "message": "無法複製到剪貼簿。"
+  }
+}
