@@ -37,3 +37,7 @@ Open the extension's **Options** (right-click its icon, or from `vivaldi://exten
 - In the extension's panel, WhatsApp runs in an iframe. To allow that, `background.js` removes `X-Frame-Options` and `Content-Security-Policy` and changes the `Sec-Fetch-*` headers, for that iframe only. If WhatsApp changes its server checks, the page may stop loading; the web panel remains as a fallback.
 - Vivaldi's panels present themselves as a mobile browser, and WhatsApp answers with its "use a computer" page, so the extension sends WhatsApp a desktop user agent (`background.js`, `desktop-ua.js`).
 - WhatsApp allows one active window: the panel, tabs and web panels compete for the session through the "Use here" prompt.
+
+## Releases
+
+Run `node scripts/release.mjs <patch|minor|major>` from a clean `main` that is in sync with GitHub. It bumps the version in `manifest.json`, commits, tags and pushes. The tag starts a GitHub Actions workflow that builds the zip and publishes the release with generated notes. Add `--dry-run` to run the checks and see the new version without changing anything.
