@@ -1,0 +1,195 @@
+<!doctype html>
+<!--
+  Mock of WhatsApp Web's desktop layout, used to exercise content.js and content.css
+  without an account. It mirrors what the extension depends on: #side, #main, a nav
+  rail, a right drawer column and a rigid min-width. It is NOT the real page.
+
+  Query params: noesc=1 (Escape ignored), stop=list|chat|drawer|back (halt for a screenshot).
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../content.css" />
+    <style>
+      html, body { margin: 0; height: 100%; font: 14px system-ui; }
+      #app, .outer { height: 100%; min-width: 750px; }
+      .two { display: grid; grid-template-columns: 64px 30% 1fr auto; height: 100%; }
+      .rail { background: #ddd; }
+      .col { min-width: 300px; display: flex; flex-direction: column; }
+      #side { flex: 1; background: #fff; display: flex; flex-direction: column; }
+      #pane-side { flex: 1; overflow: auto; }
+      .row { padding: 16px; border-bottom: 1px solid #eee; cursor: pointer; }
+      .right { background: #eee; display: flex; }
+      .placeholder { margin: auto; }
+      #main { flex: 1; display: flex; flex-direction: column; }
+      #main header { display: flex; align-items: center; height: 60px; padding: 0 12px; background: #f0f2f5; cursor: pointer; }
+      .messages { flex: 1; padding: 16px; }
+      footer { padding: 12px; background: #f0f2f5; }
+      .drawer { background: #fff; }
+      .drawer > div { width: 400px; padding: 16px; }
+      .two { position: relative; }
+      .layer { position: absolute; inset: 0; display: flex; padding-left: 64px; pointer-events: none; }
+      .slot { width: 30%; border-left: 1px solid #ccc; pointer-events: auto; background: #fff; }
+      .slot:empty { background: transparent; pointer-events: none; }
+      .row-visible { visibility: visible; }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="outer">
+        <div class="two">
+          <header class="rail" id="rail"></header>
+          <div class="col" id="leftcol">
+            <div id="side">
+              <div id="pane-side">
+                <div class="row row-visible" id="row1">Chat Uno</div>
+                <div class="row row-visible" id="row2">Chat Due</div>
+              </div>
+            </div>
+          </div>
+          <div class="right" id="rightcol"><div class="placeholder">Seleziona una chat</div></div>
+          <div class="drawer" id="drawer"></div>
+          <div class="layer" id="layer"><div class="slot" id="slot-left"></div><div class="slot" id="slot-right"></div></div>
+        </div>
+      </div>
+    </div>
+    <pre id="result"></pre>
+    <script>
+      const params = new URLSearchParams(location.search);
+      const rightcol = document.getElementById('rightcol');
+      const drawer = document.getElementById('drawer');
+      const events = { headerClicks: 0 };
+
+      function openChat(name) {
+        rightcol.innerHTML = `<div id="main"><header id="chat-header"><span dir="auto">${name}</span></header><div class="messages">Messaggi di ${name}</div><footer>Scrivi</footer></div>`;
+        document.getElementById('chat-header').addEventListener('click', () => { events.headerClicks++; });
+      }
+      function closeChat() {
+        rightcol.innerHTML = '<div class="placeholder">Seleziona una chat</div>';
+      }
+      document.getElementById('pane-side').addEventListener('click', (e) => {
+        const row = e.target.closest('.row');
+        if (row) openChat(row.textContent);
+      });
+      if (!params.get('noesc')) {
+        // Like the real page: Escape closes an open side panel first, and is ignored
+        // while that panel animates out.
+        let ignoreEscapeUntil = 0;
+        document.addEventListener('keydown', (e) => {
+          if (e.key !== 'Escape' || performance.now() < ignoreEscapeUntil) return;
+          const slot = document.getElementById('slot-left');
+          if (slot.innerHTML) {
+            slot.innerHTML = '';
+            ignoreEscapeUntil = performance.now() + 500;
+          } else {
+            closeChat();
+          }
+        });
+      }
+
+      // Stub of the only chrome.* APIs content.js touches.
+      window.chrome = {
+        runtime: { id: 'test' },
+        storage: {
+          onChanged: { addListener() {} },
+          local: {
+            get: (defaults) => Promise.resolve({ ...defaults }),
+            set: () => Promise.resolve(),
+          },
+        },
+      };
+    </script>
+    <script src="../content.js"></script>
+    <script>
+      const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+      const visible = (el) => {
+        if (!el) return false;
+        const r = el.getBoundingClientRect();
+        return r.width > 0 && r.height > 0 && getComputedStyle(el).visibility !== 'hidden' && getComputedStyle(el).display !== 'none';
+      };
+      const width = (el) => Math.round(el.getBoundingClientRect().width);
+      const $ = (id) => document.getElementById(id);
+      const lines = [];
+      const check = (name, ok, extra = '') => lines.push(`${ok ? 'PASS' : 'FAIL'} ${name} ${extra}`);
+      const finish = () => {
+        lines.push(`DONE vw=${innerWidth} classes=${document.documentElement.className}`);
+        $('result').textContent = lines.join('\n');
+        $('result').style.display = params.get('stop') ? 'none' : '';
+      };
+      const stopAt = (step) => params.get('stop') === step;
+
+      (async () => {
+        await wait(150);
+        if (innerWidth >= 700) {
+          check('wide: full page untouched', !document.documentElement.classList.contains('wsp-on') && visible($('rail')) && visible($('rightcol')) && visible($('side')));
+          $('row1').click();
+          await wait(150);
+          check('wide: chat beside list', visible($('main')) && visible($('side')));
+          check('wide: no back button', !visible(document.querySelector('.wsp-back')));
+          return finish();
+        }
+
+        check('list: only the list is visible', visible($('side')) && !visible($('rightcol')) && !visible($('rail')));
+        check('list: full width, no overflow', width($('side')) === innerWidth && document.documentElement.scrollWidth <= innerWidth, `side=${width($('side'))}`);
+        check('list: empty layer slots leave no border line', !visible($('slot-left')) && !visible($('slot-right')));
+        if (stopAt('list')) return finish();
+
+        $('slot-left').innerHTML = '<div>Nuova chat</div>';
+        await wait(150);
+        const slotRect = $('slot-left').getBoundingClientRect();
+        check('left panel: covers the list at full width', visible($('slot-left')) && Math.round(slotRect.left) === 0 && Math.round(slotRect.width) === innerWidth, `left=${slotRect.left} width=${slotRect.width}`);
+
+        $('row1').click();
+        await wait(150);
+        const hit = document.elementFromPoint(innerWidth / 2, 300);
+        check('left panel: stays out of the way of an open chat', !$('slot-left').contains(hit) && $('main').contains(hit));
+        check('hidden list: rows with their own visibility cannot show through', getComputedStyle($('leftcol')).opacity === '0' && getComputedStyle($('leftcol')).clipPath !== 'none');
+        $('slot-left').innerHTML = '';
+        closeChat();
+        await wait(150);
+
+        $('row1').click();
+        await wait(150);
+        check('chat: only the chat is visible', visible($('main')) && !visible($('side')));
+        check('chat: full width', width($('main')) === innerWidth, `main=${width($('main'))}`);
+        const back = document.querySelector('.wsp-back');
+        check('chat: back button in header', visible(back) && back.parentElement === $('chat-header'));
+        if (stopAt('chat')) return finish();
+
+        drawer.innerHTML = '<div>Info contatto</div>';
+        await wait(150);
+        check('drawer: covers the chat at full width', visible(drawer) && width(drawer) === innerWidth, `drawer=${width(drawer)}`);
+        if (stopAt('drawer')) return finish();
+        drawer.innerHTML = '';
+        await wait(150);
+        check('drawer: closes back to chat', !visible(drawer) && visible($('main')));
+
+        back.click();
+        await wait(500);
+        check('back: click did not reach the chat header', events.headerClicks === 0);
+        check('back: list visible, chat not', visible($('side')) && !visible($('main')));
+        if (params.get('noesc')) {
+          check('back (no Esc): chat still open but hidden', Boolean($('main')));
+        } else {
+          check('back: chat really closed by Escape', !$('main'));
+        }
+        if (stopAt('back')) return finish();
+
+        $('row1').click();
+        await wait(150);
+        check('reopen same chat: chat visible', visible($('main')) && !visible($('side')));
+        const newBack = document.querySelector('.wsp-back');
+        check('reopen: back button present', visible(newBack) && newBack.parentElement === $('chat-header'));
+
+        if (!params.get('noesc')) {
+          $('slot-left').innerHTML = '<div>Archiviate</div>';
+          await wait(150);
+          newBack.click();
+          await wait(1200);
+          check('back with a side panel open: chat really closed', !$('main'));
+        }
+        finish();
+      })();
+    </script>
+  </body>
+</html>

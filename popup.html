@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>WhatsApp Side Panel Layout</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font: 13px/1.4 system-ui, sans-serif;
+      }
+      body {
+        width: 270px;
+        margin: 0;
+        padding: 12px;
+        display: grid;
+        gap: 10px;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+      input[type='number'] {
+        width: 72px;
+      }
+      #status {
+        padding: 8px;
+        border-radius: 6px;
+        background: rgba(128, 128, 128, 0.15);
+      }
+      #status.problem {
+        background: rgba(220, 60, 60, 0.2);
+      }
+      #message {
+        min-height: 1.4em;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <label>Attiva <input id="enabled" type="checkbox" /></label>
+    <label>Larghezza massima (px) <input id="threshold" type="number" min="300" max="2000" step="10" /></label>
+    <label>Barra icone a sinistra nell'elenco <input id="showNav" type="checkbox" /></label>
+    <div id="status" role="status"></div>
+    <button id="diagnostics" type="button">Copia diagnostica</button>
+    <p id="message" role="alert"></p>
+    <script src="popup.js"></script>
+  </body>
+</html>

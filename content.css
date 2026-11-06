@@ -1,0 +1,164 @@
+/* Everything is scoped to html.wsp-on: above the threshold these rules are inert. */
+
+html.wsp-on,
+html.wsp-on body {
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+html.wsp-on [data-wsp-path] {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin-inline: 0 !important;
+}
+
+html.wsp-on [data-wsp-shell] {
+  display: flex !important;
+  position: relative !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+html.wsp-on [data-wsp="left"],
+html.wsp-on [data-wsp="pane"] {
+  flex: 1 1 0 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
+/* Inactive panes stay laid out instead of display:none, so the virtualized
+   chat list keeps its scroll position when coming back from a chat.
+   visibility alone is not enough: WhatsApp's chat rows set their own
+   visibility:visible and would show through. opacity and clip-path also apply
+   to descendants, and clip-path blocks clicks on them too. */
+html.wsp-on.wsp-list [data-wsp="pane"],
+html.wsp-on.wsp-chat [data-wsp="left"],
+html.wsp-on.wsp-chat [data-wsp="pane"]:not([data-wsp-current]) {
+  position: absolute !important;
+  inset: 0 !important;
+  flex: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  clip-path: inset(100%) !important;
+  pointer-events: none !important;
+}
+
+/* Contact info, media, search in chat: covers the chat instead of squeezing it. */
+html.wsp-on.wsp-chat [data-wsp="pane"][data-wsp-drawer] {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 200 !important; /* WhatsApp's chat column is 100, its panel layer 300. */
+  flex: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  clip-path: none !important;
+  pointer-events: auto !important;
+}
+
+html.wsp-on.wsp-chat [data-wsp-drawer] > * {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
+/* WhatsApp's modal wrapper has min-width: 748px, which pushes dialogs off-screen. */
+html.wsp-on [role="dialog"] {
+  min-width: 0 !important;
+}
+
+html.wsp-on [role="dialog"] > div {
+  max-width: calc(100vw - 16px) !important;
+}
+
+/* Absolute layers are offset to leave room for the nav rail and sized per column. */
+html.wsp-on [data-wsp="layer"] {
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+html.wsp-on [data-wsp-slot] {
+  position: absolute !important;
+  inset: 0 !important;
+  flex: none !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  border: 0 !important;
+}
+
+html.wsp-on [data-wsp-slot] > *,
+html.wsp-on [data-wsp-slot] > * > * {
+  left: 0 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
+html.wsp-on [data-wsp-slot]:not([data-wsp-filled]) {
+  display: none !important;
+}
+
+html.wsp-on.wsp-chat [data-wsp-slot="left"] {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  clip-path: inset(100%) !important;
+  pointer-events: none !important;
+}
+
+html.wsp-on.wsp-chat [data-wsp="nav"],
+html.wsp-on.wsp-list:not(.wsp-show-nav) [data-wsp="nav"] {
+  display: none !important;
+}
+
+.wsp-back {
+  display: none;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-inline-end: 4px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+html.wsp-on.wsp-chat .wsp-back {
+  display: inline-flex;
+}
+
+.wsp-back:hover {
+  background: rgba(128, 128, 128, 0.2);
+}
+
+.wsp-back:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+}
+
+/* Used only if the chat has no <header> to put the button in. */
+.wsp-back--floating {
+  position: fixed;
+  top: 10px;
+  left: 8px;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+}
