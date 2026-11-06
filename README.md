@@ -4,17 +4,30 @@ An extension for Vivaldi (and other Chromium browsers) that makes WhatsApp Web u
 
 The interface follows your browser's language automatically. Supported: English, Spanish, French, German, Italian, Portuguese (Brazil and Portugal), Russian, Chinese (Simplified and Traditional), Japanese, Korean, Arabic, Hindi, Turkish, Dutch, Polish and Indonesian. Any other language falls back to English.
 
-| Chat list | Wider than the threshold |
+| Chat list | Open chat |
 |---|---|
-| <img src="docs/screenshots/chat-list.jpg" alt="Narrow panel showing only the chat list" width="240"> | <img src="docs/screenshots/full-page.jpg" alt="Wide window showing the normal WhatsApp Web page" width="360"> |
+| <img src="docs/screenshots/chat-list.jpg" alt="Narrow panel showing only the chat list" width="240"> | <img src="docs/screenshots/chat.jpg" alt="Narrow panel showing only the open chat with a back button" width="240"> |
 
 Screenshots of the real page with placeholder names, pictures and messages.
 
 ## Installation
 
-1. Open `vivaldi://extensions` and turn on **Developer mode**.
-2. Click **Load unpacked** and select this folder.
-3. Click the extension's icon in the toolbar to open WhatsApp in the side panel.
+### From a release (recommended)
+
+1. Download `sidepanel-for-whatsapp-<version>.zip` from the [latest release](https://github.com/C1p86/sidepanel-for-whatsapp/releases/latest).
+2. Extract it to a folder you will keep: the browser loads the extension from there.
+3. Open `vivaldi://extensions` and turn on **Developer mode**.
+4. Click **Load unpacked** and select that folder.
+5. Click the extension's icon in the toolbar to open WhatsApp in the side panel.
+
+To update, extract the new zip over the same folder and click the extension's reload button in `vivaldi://extensions`.
+
+### From the source code
+
+1. Clone this repository.
+2. Open `vivaldi://extensions` and turn on **Developer mode**.
+3. Click **Load unpacked** and select the repository's folder.
+4. Click the extension's icon in the toolbar to open WhatsApp in the side panel.
 
 ### If the panel does not open
 
