@@ -1,4 +1,4 @@
-# SidePane for WhatsApp
+# Side Panel for WhatsApp
 
 An extension for Vivaldi (and other Chromium browsers) that makes WhatsApp Web usable in a narrow side panel. Below a width you choose, it shows one pane at a time, like Telegram: the chat list or the open chat, with a back button. Above that width you get the normal full page.
 
